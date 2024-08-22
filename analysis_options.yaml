@@ -1,0 +1,34 @@
+include: strict_lint.yaml
+
+analyzer:
+  plugins:
+    - dart_code_metrics
+  exclude:
+    - '**/app_localizations*.dart'
+    - '**.g.dart'
+    - '**.freezed.dart'
+  errors:
+    invalid_annotation_target: ignore # https://github.com/rrousselGit/freezed/issues/488
+
+linter:
+  rules:
+    # Follow flutter repo https://github.com/flutter/flutter/blob/master/analysis_options.yaml
+    prefer_single_quotes: true
+    sort_constructors_first: true
+
+dart_code_metrics:
+  anti-patterns:
+    - long-method:
+        severity: none
+    - long-parameter-list:
+        severity: none
+  metrics:
+    cyclomatic-complexity: 20
+    maximum-nesting-level: 5
+    number-of-parameters: 7
+    source-lines-of-code: 50
+  rules:
+    - newline-before-return
+    - no-boolean-literal-compare
+    - prefer-trailing-comma
+    - no-equal-then-else
