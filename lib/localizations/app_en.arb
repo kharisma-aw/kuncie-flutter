@@ -1,0 +1,20 @@
+{
+  "appName": "KuncieFlutterTest",
+  "searchHere": "Search here...",
+  "oooooppss": "Oooooppss...",
+  "connectionProblemOccured": "Oh no, connection problem occured",
+  "noResult": "No Result",
+  "noMovieData": "Unfortunately, we're empty",
+  "noMovieFound": "Unfortunately, no movie found with the search keyword {query}",
+  "@noMovieFound": {
+    "placeholders": {
+      "query": {
+        "type": "String"
+      }
+    }
+  },
+  "ok": "Ok",
+  "retry": "Retry",
+  "errorOccured": "Error occured",
+  "failedToLoadData": "Failed to load data"
+}
