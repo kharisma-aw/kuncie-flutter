@@ -26,8 +26,8 @@ class _MovieListScreen extends ConsumerState<MovieListScreen> {
       ref.read(MovieListController.provider.notifier).getPopularMovies();
     });
     _scrollController.addListener(() {
-      if (_scrollController.position.pixels ==
-          _scrollController.position.maxScrollExtent) {
+      if (_scrollController.position.pixels >=
+          .95 * _scrollController.position.maxScrollExtent) {
         ref.read(MovieListController.provider.notifier).onScrolledToBottom();
       }
     });
